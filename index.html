@@ -836,73 +836,91 @@
     // The Google Apps Script URL is intentionally a placeholder until
     // you deploy the companion Code.gs file.
     // ---------------------------------------------------------------
+    
+    // ---------------------------------------------------------------
+    // Portfolio Visitor Analytics
+    // ---------------------------------------------------------------
+    
     const VISITOR_TRACKING_URL = 'https://script.google.com/macros/s/AKfycbzyURR91jK1I9ZLD_Thmb1eChpqPe6YVAiJtuzGpfKkJ-kxC19s7cqfiK3754sxJdW2bg/exec';
 
     async function trackPortfolioVisit() {
-      if (!VISITOR_TRACKING_URL || VISITOR_TRACKING_URL.includes('PASTE_YOUR_')) return;
 
-      // Avoid recording repeated page refreshes in the same browser session.
-      const trackingKey = 'francis_portfolio_visit_tracked';
-      if (sessionStorage.getItem(trackingKey)) return;
+        // Only record one visit per browser session
+        const trackingKey = 'francis_portfolio_visit_tracked';
 
-      try {
-        const response = await fetch('https://ipapi.co/json/', {
-          method: 'GET',
-          cache: 'no-store'
-        });
-
-        const geo = response.ok ? await response.json() : {};
+        if (sessionStorage.getItem(trackingKey)) {
+            return;
+        }
 
         const payload = {
-          timestamp: new Date().toISOString(),
-          page: window.location.href,
-          referrer: document.referrer || 'Direct',
-          ip: geo.ip || 'Unavailable',
-          city: geo.city || 'Unknown',
-          region: geo.region || 'Unknown',
-          country: geo.country_name || 'Unknown',
-          country_code: geo.country_code || 'Unknown',
-          timezone: geo.timezone || Intl.DateTimeFormat().resolvedOptions().timeZone,
-          latitude: geo.latitude || '',
-          longitude: geo.longitude || '',
-          device: /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' :
-                  /Tablet|iPad/i.test(navigator.userAgent) ? 'Tablet' : 'Desktop',
-          browser: (() => {
-            const ua = navigator.userAgent;
-            if (ua.includes('Edg/')) return 'Edge';
-            if (ua.includes('Chrome/')) return 'Chrome';
-            if (ua.includes('Firefox/')) return 'Firefox';
-            if (ua.includes('Safari/')) return 'Safari';
-            return 'Other';
-          })(),
-          operating_system: (() => {
-            const ua = navigator.userAgent;
-            if (/Windows/i.test(ua)) return 'Windows';
-            if (/Mac OS X/i.test(ua)) return 'macOS';
-            if (/Android/i.test(ua)) return 'Android';
-            if (/iPhone|iPad|iPod/i.test(ua)) return 'iOS';
-            if (/Linux/i.test(ua)) return 'Linux';
-            return 'Other';
-          })(),
-          screen: `${window.screen.width}x${window.screen.height}`
+            timestamp: new Date().toISOString(),
+
+            page: window.location.href,
+
+            referrer: document.referrer || 'Direct',
+
+            timezone:
+                Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unknown',
+
+            device:
+                /Mobi|Android/i.test(navigator.userAgent)
+                    ? 'Mobile'
+                    : /Tablet|iPad/i.test(navigator.userAgent)
+                        ? 'Tablet'
+                        : 'Desktop',
+
+            browser: (() => {
+                const ua = navigator.userAgent;
+
+                if (ua.includes('Edg/')) return 'Edge';
+                if (ua.includes('Chrome/')) return 'Chrome';
+                if (ua.includes('Firefox/')) return 'Firefox';
+                if (ua.includes('Safari/')) return 'Safari';
+
+                return 'Other';
+            })(),
+
+            operating_system: (() => {
+                const ua = navigator.userAgent;
+
+                if (/Windows/i.test(ua)) return 'Windows';
+                if (/Mac OS X/i.test(ua)) return 'macOS';
+                if (/Android/i.test(ua)) return 'Android';
+                if (/iPhone|iPad|iPod/i.test(ua)) return 'iOS';
+                if (/Linux/i.test(ua)) return 'Linux';
+
+                return 'Other';
+            })(),
+
+            screen:
+                `${window.screen.width}x${window.screen.height}`
         };
 
-        // Apps Script web apps accept POST requests from the browser.
-        // no-cors prevents a CORS response from blocking the request.
-        await fetch(VISITOR_TRACKING_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: {
-            'Content-Type': 'text/plain;charset=utf-8'
-          },
-          body: JSON.stringify(payload)
-        });
+        try {
 
-        sessionStorage.setItem(trackingKey, '1');
-      } catch (error) {
-        // Analytics must never interfere with the portfolio itself.
-        console.debug('Visitor analytics unavailable:', error);
-      }
+            await fetch(VISITOR_TRACKING_URL, {
+                method: 'POST',
+                mode: 'no-cors',
+
+                headers: {
+                    'Content-Type': 'text/plain;charset=utf-8'
+                },
+
+                body: JSON.stringify(payload)
+            });
+
+            // Mark this browser session as tracked
+            sessionStorage.setItem(trackingKey, '1');
+
+            console.log('Portfolio visit recorded.');
+
+        } catch (error) {
+
+            console.error(
+                'Visitor tracking failed:',
+                error
+            );
+        }
     }
 
     trackPortfolioVisit();
