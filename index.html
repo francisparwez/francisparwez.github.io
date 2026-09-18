@@ -1,94 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Francis Parwez — Data Analyst</title>
-<meta name="description" content="Francis Parwez — Data Analyst in Karachi, Pakistan. MSc Data Science graduate skilled in SQL, Power BI, Excel, Python, ETL, data cleaning, KPI reporting, and dashboard development." />
-<meta name="keywords" content="Francis Parwez, Data Analyst, Karachi, Pakistan, SQL, Power BI, Excel, Python, ETL, Data Cleaning, Dashboard, Business Intelligence" />
-<link rel="icon" type="image/png" href="images/francis_parwez.png">
-  
-<!-- Google Fonts: JetBrains Mono (display/code voice) + Inter (body voice) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- Tailwind CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  // ---------------------------------------------------------------
-  // Design tokens: this whole site is themed off of a "dark code
-  // editor" concept, so the palette borrows from syntax-highlighting
-  // roles (background / panel / keyword / string / muted-comment)
-  // rather than a generic brand palette.
-  // ---------------------------------------------------------------
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          void:        '#0A0E14', // page background — the "editor canvas"
-          panel:       '#121826', // card / editor-window background
-          panelHover:  '#171F30', // hovered / raised panel surface
-          edge:        '#232B3D', // hairline borders throughout
-          ink:         '#E7ECF3', // primary text (off-white, easy on dark bg)
-          muted:       '#8A93A6', // secondary text — reads like code comments
-          indigo:      '#7C9CFF', // primary accent — "keyword" blue
-          amber:       '#F2A65A', // secondary accent — "string" amber
-          mint:        '#6EE7B7', // tertiary accent — used sparingly for tags
-        },
-        fontFamily: {
-          mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
-          sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        },
-        keyframes: {
-          blink: { '0%, 49%': { opacity: 1 }, '50%, 100%': { opacity: 0 } },
-          fadeUp: { '0%': { opacity: 0, transform: 'translateY(24px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
-        },
-        animation: {
-          blink: 'blink 1s steps(1) infinite',
-          fadeUp: 'fadeUp 0.7s ease-out forwards',
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Francis Parwez — Data Analyst</title>
+  <meta name="description"
+    content="Portfolio of Francis Parwez, a Data Analyst and MSc Data Science graduate specializing in SQL, Power BI, Python, Excel, ETL, data quality, analytics, and machine learning." />
+  <link rel="icon" type="image/png" href="images/francis_parwez.png">
+
+  <!-- Google Fonts: JetBrains Mono (display/code voice) + Inter (body voice) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // ---------------------------------------------------------------
+    // Design tokens: this whole site is themed off of a "dark code
+    // editor" concept, so the palette borrows from syntax-highlighting
+    // roles (background / panel / keyword / string / muted-comment)
+    // rather than a generic brand palette.
+    // ---------------------------------------------------------------
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            void: '#0A0E14', // page background — the "editor canvas"
+            panel: '#121826', // card / editor-window background
+            panelHover: '#171F30', // hovered / raised panel surface
+            edge: '#232B3D', // hairline borders throughout
+            ink: '#E7ECF3', // primary text (off-white, easy on dark bg)
+            muted: '#8A93A6', // secondary text — reads like code comments
+            indigo: '#7C9CFF', // primary accent — "keyword" blue
+            amber: '#F2A65A', // secondary accent — "string" amber
+            mint: '#6EE7B7', // tertiary accent — used sparingly for tags
+          },
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace'],
+            sans: ['"Inter"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+          },
+          keyframes: {
+            blink: { '0%, 49%': { opacity: 1 }, '50%, 100%': { opacity: 0 } },
+            fadeUp: { '0%': { opacity: 0, transform: 'translateY(24px)' }, '100%': { opacity: 1, transform: 'translateY(0)' } },
+          },
+          animation: {
+            blink: 'blink 1s steps(1) infinite',
+            fadeUp: 'fadeUp 0.7s ease-out forwards',
+          },
         },
       },
-    },
-  };
-</script>
+    };
+  </script>
 
-<style>
-  /* Smooth in-page scrolling for nav anchors */
-  html { scroll-behavior: smooth; }
-  body { background-color: #0A0E14; }
+  <style>
+    /* Smooth in-page scrolling for nav anchors */
+    html {
+      scroll-behavior: smooth;
+    }
 
-  /* Scroll-reveal: elements start hidden/offset, JS below flips them
+    body {
+      background-color: #0A0E14;
+    }
+
+    /* Scroll-reveal: elements start hidden/offset, JS below flips them
      to visible once they cross the viewport. */
-  [data-reveal] { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
 
-  /* Custom scrollbar to match the dark editor theme */
-  ::-webkit-scrollbar { width: 10px; }
-  ::-webkit-scrollbar-track { background: #0A0E14; }
-  ::-webkit-scrollbar-thumb { background: #232B3D; border-radius: 9999px; }
-  ::-webkit-scrollbar-thumb:hover { background: #2E3852; }
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-  /* Visible, on-brand keyboard focus ring everywhere (accessibility) */
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
-    outline: 2px solid #7C9CFF;
-    outline-offset: 2px;
-    border-radius: 4px;
-  }
+    /* Custom scrollbar to match the dark editor theme */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-  /* Respect users who've asked for reduced motion */
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
-    [data-reveal] { opacity: 1 !important; transform: none !important; }
-  }
-</style>
+    ::-webkit-scrollbar-track {
+      background: #0A0E14;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #232B3D;
+      border-radius: 9999px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2E3852;
+    }
+
+    /* Visible, on-brand keyboard focus ring everywhere (accessibility) */
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible,
+    textarea:focus-visible {
+      outline: 2px solid #7C9CFF;
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    /* Respect users who've asked for reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+      }
+
+      [data-reveal] {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-void text-ink font-sans antialiased selection:bg-indigo/30 selection:text-white overflow-x-hidden">
 
   <!-- Skip link for keyboard / screen-reader users -->
-  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-indigo focus:text-void focus:px-4 focus:py-2 focus:rounded-lg font-mono text-sm">
+  <a href="#main"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-indigo focus:text-void focus:px-4 focus:py-2 focus:rounded-lg font-mono text-sm">
     Skip to main content
   </a>
 
@@ -104,21 +149,21 @@
       <!-- Desktop links -->
       <ul class="hidden md:flex items-center gap-8 font-mono text-sm text-muted">
         <li><a href="#about" class="hover:text-indigo transition-colors">about.md</a></li>
-        <li><a href="#projects" class="hover:text-indigo transition-colors">projects.json</a></li>
-        <li><a href="#certificates" class="hover:text-indigo transition-colors">certificates.json</a></li>
-        <li><a href="#strengths" class="hover:text-indigo transition-colors">profile.json</a></li>
+        <li><a href="#projects" class="hover:text-indigo transition-colors">projects/</a></li>
+        <li><a href="#experience" class="hover:text-indigo transition-colors">experience.log</a></li>
         <li><a href="#skills" class="hover:text-indigo transition-colors">skills.json</a></li>
+        <li><a href="#certifications" class="hover:text-indigo transition-colors">certifications.md</a></li>
         <li><a href="#contact" class="hover:text-indigo transition-colors">contact.sh</a></li>
       </ul>
 
       <a href="#contact"
-         class="hidden md:inline-flex items-center gap-2 font-mono text-sm px-4 py-2 rounded-lg border border-indigo/50 text-indigo hover:bg-indigo hover:text-void transition-colors">
+        class="hidden md:inline-flex items-center gap-2 font-mono text-sm px-4 py-2 rounded-lg border border-indigo/50 text-indigo hover:bg-indigo hover:text-void transition-colors">
         Let's talk
       </a>
 
       <!-- Mobile hamburger -->
       <button id="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu"
-              class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center">
+        class="md:hidden flex flex-col gap-1.5 w-8 h-8 items-center justify-center">
         <span class="w-6 h-0.5 bg-ink transition-transform"></span>
         <span class="w-6 h-0.5 bg-ink transition-opacity"></span>
         <span class="w-6 h-0.5 bg-ink transition-transform"></span>
@@ -126,12 +171,13 @@
     </nav>
 
     <!-- Mobile menu panel -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-edge bg-void/95 px-6 py-6 space-y-4 font-mono text-sm">
+    <div id="mobile-menu"
+      class="hidden md:hidden border-t border-edge bg-void/95 px-6 py-6 space-y-4 font-mono text-sm">
       <a href="#about" class="block text-muted hover:text-indigo">about.md</a>
-      <a href="#projects" class="block text-muted hover:text-indigo">projects.json</a>
-      <a href="#certificates" class="block text-muted hover:text-indigo">certificates.json</a>
-      <a href="#strengths" class="block text-muted hover:text-indigo">profile.json</a>
+      <a href="#projects" class="block text-muted hover:text-indigo">projects/</a>
+      <a href="#experience" class="block text-muted hover:text-indigo">experience.log</a>
       <a href="#skills" class="block text-muted hover:text-indigo">skills.json</a>
+      <a href="#certifications" class="block text-muted hover:text-indigo">certifications.md</a>
       <a href="#contact" class="block text-indigo">contact.sh</a>
     </div>
   </header>
@@ -141,10 +187,13 @@
     <!-- =========================================================
          HERO
     ========================================================== -->
-    <section id="home" class="relative overflow-x-hidden max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-16 md:pt-44 md:pb-28 grid md:grid-cols-2 gap-12 md:gap-16 items-center min-h-screen">
+    <section id="home"
+      class="relative overflow-x-hidden max-w-7xl mx-auto px-6 md:px-12 pt-28 pb-16 md:pt-44 md:pb-28 grid md:grid-cols-2 gap-12 md:gap-16 items-center min-h-screen">
 
       <!-- Ambient glow, purely decorative -->
-      <div class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] bg-indigo/10 blur-[120px] rounded-full"></div>
+      <div
+        class="pointer-events-none absolute -top-24 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] bg-indigo/10 blur-[120px] rounded-full">
+      </div>
 
       <!-- Left: headline + bio + CTAs -->
       <div class="relative">
@@ -159,48 +208,54 @@
         </p>
 
         <p class="mt-6 text-muted leading-relaxed max-w-lg">
-          I turn structured and messy datasets into reliable analysis, KPI dashboards,
-          and business-ready insights. MSc Data Science graduate with hands-on experience
-          in SQL, ETL, data cleaning, validation, Power BI, Excel, and Python — with a
-          software development background that helps me solve problems end to end.
+          I turn raw, messy data into reliable analysis, interactive dashboards,
+          and reproducible data workflows. With an MSc in Data Science, a
+          background in software development, and hands-on work across SQL,
+          Power BI, Python, Excel, ETL, and machine learning, I focus on making
+          data accurate, understandable, and useful for decisions.
         </p>
 
         <div class="mt-8 flex flex-wrap gap-4">
           <a href="#projects"
-             class="inline-flex items-center gap-2 font-mono text-sm font-semibold bg-indigo text-void px-6 py-3 rounded-lg hover:bg-indigo/85 hover:-translate-y-0.5 transition-all shadow-lg shadow-indigo/20">
+            class="inline-flex items-center gap-2 font-mono text-sm font-semibold bg-indigo text-void px-6 py-3 rounded-lg hover:bg-indigo/85 hover:-translate-y-0.5 transition-all shadow-lg shadow-indigo/20">
             View my work
           </a>
-          <a href="files/Francis Parwez.pdf" download
-            target="_blank"
+          <a href="files/Francis Parwez.pdf" download target="_blank"
             class="inline-flex items-center gap-2 font-mono text-sm px-6 py-3 rounded-lg border border-edge text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">
             Download Resume
           </a>
         </div>
 
-        <div class="mt-7 flex flex-wrap gap-2 text-xs font-mono">
-          <span class="px-3 py-1.5 rounded-full bg-mint/10 border border-mint/30 text-mint">Open to Data Analyst roles</span>
-          <span class="px-3 py-1.5 rounded-full bg-panel border border-edge text-muted">SQL</span>
-          <span class="px-3 py-1.5 rounded-full bg-panel border border-edge text-muted">Power BI</span>
-          <span class="px-3 py-1.5 rounded-full bg-panel border border-edge text-muted">Excel</span>
-          <span class="px-3 py-1.5 rounded-full bg-panel border border-edge text-muted">Python</span>
-        </div>
-
         <!-- Socials -->
         <div class="mt-10 flex items-center gap-5 text-muted">
-          <a href="https://github.com/francisparwez" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" class="hover:text-indigo transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.24 9.24 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+          <a href="https://github.com/francisparwez" target="_blank" rel="noopener noreferrer"
+            aria-label="GitHub profile" class="hover:text-indigo transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.24 9.24 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+            </svg>
           </a>
-          <a href="https://www.linkedin.com/in/francisparwez/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" class="hover:text-indigo transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.83v2.05h.05c.53-1 1.85-2.05 3.8-2.05 4.07 0 4.82 2.68 4.82 6.16V23h-4v-6.9c0-1.64-.03-3.76-2.29-3.76-2.29 0-2.64 1.79-2.64 3.64V23h-4V8z"/></svg>
+          <a href="https://www.linkedin.com/in/francisparwez/" target="_blank" rel="noopener noreferrer"
+            aria-label="LinkedIn profile" class="hover:text-indigo transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.83v2.05h.05c.53-1 1.85-2.05 3.8-2.05 4.07 0 4.82 2.68 4.82 6.16V23h-4v-6.9c0-1.64-.03-3.76-2.29-3.76-2.29 0-2.64 1.79-2.64 3.64V23h-4V8z" />
+            </svg>
           </a>
-          <a href="mailto:francisparwez@gmail.com" aria-label="Send an email" class="hover:text-indigo transition-colors">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M2 6l10 7 10-7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <a href="mailto:francisparwez@gmail.com" aria-label="Send an email"
+            class="hover:text-indigo transition-colors">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16v16H4z" opacity="0" />
+              <path d="M2 6l10 7 10-7" />
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+            </svg>
           </a>
         </div>
       </div>
 
       <!-- Right: signature "code editor" panel mirroring the bio as code -->
-      <div class="relative rounded-xl border border-edge bg-panel shadow-2xl shadow-black/50 overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+      <div
+        class="relative rounded-xl border border-edge bg-panel shadow-2xl shadow-black/50 overflow-hidden hover:-translate-y-1 transition-transform duration-300">
         <!-- Editor chrome / tab bar -->
         <div class="flex items-center gap-2 px-4 py-3 bg-panelHover border-b border-edge">
           <span class="w-3 h-3 rounded-full bg-[#FF5F56]"></span>
@@ -212,24 +267,38 @@
         <!-- Code body: left = line numbers, right = "syntax highlighted" bio -->
         <div class="flex font-mono text-[13px] sm:text-sm leading-relaxed p-5 overflow-x-auto">
           <div class="select-none text-right pr-4 text-muted/40">
-            <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div>
-            <div>6</div><div>7</div><div>8</div><div>9</div><div>10</div>
-            <div>11</div><div>12</div><div>13</div>
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
           </div>
           <div class="text-ink whitespace-pre">
-<span class="text-muted">// data-driven, always curious</span>
-<span class="text-indigo">const</span> analyst = {
-  name: <span class="text-amber">'Francis Parwez'</span>,
-  role: <span class="text-amber">'Data Analyst'</span>,
-  based: <span class="text-amber">'Karachi, Pakistan'</span>,
-  toolkit: [<span class="text-amber">'Power BI'</span>, <span class="text-amber">'SQL'</span>, <span class="text-amber">'Python'</span>],
-  degree: <span class="text-amber">'MSc Data Science'</span>,
-  loves: [<span class="text-amber">'clean dashboards'</span>, <span class="text-amber">'good stories'</span>],
-};
+            <span class="text-muted">// data-driven, always curious</span>
+            <span class="text-indigo">const</span> analyst = {
+            name: <span class="text-amber">'Francis Parwez'</span>,
+            role: <span class="text-amber">'Data Analyst'</span>,
+            based: <span class="text-amber">'Karachi, Pakistan'</span>,
+            toolkit: [<span class="text-amber">'SQL'</span>, <span class="text-amber">'Power BI'</span>, <span
+              class="text-amber">'Python'</span>, <span class="text-amber">'Excel'</span>],
+            degree: <span class="text-amber">'MSc Data Science'</span>,
+            loves: [<span class="text-amber">'data quality'</span>, <span class="text-amber">'clean dashboards'</span>,
+            <span class="text-amber">'reproducible analysis'</span>],
+            };
 
-<span class="text-indigo">function</span> sayHello() {
-  <span class="text-indigo">return</span> <span class="text-amber">`Let's turn your data into decisions!`</span>;
-}<span class="text-muted animate-blink">|</span></div>
+            <span class="text-indigo">function</span> sayHello() {
+            <span class="text-indigo">return</span> <span class="text-amber">`Let's turn your data into
+              decisions!`</span>;
+            }<span class="text-muted animate-blink">|</span>
+          </div>
         </div>
       </div>
     </section>
@@ -245,25 +314,25 @@
         <!-- Story -->
         <div class="md:col-span-3 space-y-5 text-muted leading-relaxed">
           <p>
-            I started out writing code, not charts. A year as a MERN stack
-            developer at Divine Virtuality had me building React front ends
-            and Node.js APIs for clients across the US, India, and Lebanon —
-            and it's where I learned to care about whether software actually
-            works for the person using it, not just whether it compiles.
+            I'm a Data Analyst with an MSc in Data Science with Advanced Research
+            from the University of Hertfordshire and a BSc in Computer Science.
+            My work sits at the intersection of data analysis, business intelligence,
+            data quality, ETL, and practical machine learning.
           </p>
           <p>
-            That instinct pulled me toward data. I went on to complete an MSc
-            in Data Science (with Advanced Research) at the University of
-            Hertfordshire, and now split my time between Power BI dashboards,
-            SQL queries, and Python notebooks — figuring out what a dataset is
-            actually trying to tell a business, then building something a
-            non-technical stakeholder can look at and immediately understand.
+            I began my professional career as a MERN Stack Developer at Divine
+            Virtuality, building responsive web applications and REST APIs for
+            international clients. That software background gave me a strong
+            foundation in programming, databases, APIs, Git, debugging, and
+            structured problem solving.
           </p>
           <p>
-            I'm just as comfortable writing a DAX measure as I am debugging a
-            React component, and I like it that way — it means I can take a
-            problem from "here's a messy spreadsheet" all the way to "here's a
-            dashboard you can act on."
+            Today, I work across the analytics pipeline — auditing raw data,
+            cleaning and transforming it, exploring patterns, building KPIs,
+            developing dashboards, and documenting the work so it can be understood
+            and reproduced. My current Data Science &amp; Analytics internship at
+            BeeNeural adds hands-on experience with Python, Pandas, NumPy,
+            visualization, feature engineering, and statistical analysis.
           </p>
         </div>
 
@@ -276,11 +345,11 @@
             </div>
             <div class="flex justify-between py-3 border-b border-edge">
               <span class="text-muted">experience</span>
-              <span class="text-ink">MSc + 1 yr dev</span>
+              <span class="text-ink">Analytics + Software</span>
             </div>
             <div class="flex justify-between py-3 border-b border-edge">
               <span class="text-muted">focus</span>
-              <span class="text-ink">Data Analytics &amp; BI</span>
+              <span class="text-ink">Analytics, BI &amp; ETL</span>
             </div>
             <div class="flex justify-between py-3">
               <span class="text-muted">currently</span>
@@ -312,248 +381,186 @@
     <section id="projects" class="max-w-7xl mx-auto px-6 md:px-12 py-24" data-reveal>
       <p class="font-mono text-xs text-muted tracking-widest">// projects/</p>
       <h2 class="font-mono text-3xl md:text-4xl font-bold text-ink mt-3 mb-2">Featured Projects</h2>
-      <p class="text-muted mb-12 max-w-xl">Selected projects demonstrating SQL, Excel, Power BI, ETL, KPI reporting, data cleaning, and predictive analytics.</p>
+      <p class="text-muted mb-12 max-w-2xl">Selected analytics, BI, SQL, data science, and machine learning work — from
+        raw data quality checks through analysis, modelling, visualization, and documentation.</p>
 
-      <div class="grid md:grid-cols-1 lg:grid-cols-2 gap-6">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-        <!-- Project 1: Coca-Cola USA Retailer Dashboard -->
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-mint/50 hover:shadow-xl hover:shadow-mint/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2 h-2 rounded-full bg-mint"></span>
-            <h3 class="font-mono font-semibold text-ink">coca-cola-retail-dashboard.xlsx</h3>
+        <!-- Project 1: Coca-Cola -->
+        <article
+          class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
+          <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-indigo"></span>
+            <h3 class="font-mono font-semibold text-ink">coca-cola-sales.xlsx</h3>
           </div>
-          <p class="text-sm text-muted leading-relaxed flex-grow">
-            Interactive Excel dashboard analysing <strong class="text-ink">$12.0M</strong> in sales
-            and <strong class="text-ink">24.8M</strong> units across beverage brands and major retailers
-            for 2022–2023. Built KPI reporting, YoY variance analysis, quarterly performance views,
-            and Region/Year slicers.
-          </p>
-          <div class="flex flex-wrap gap-2 my-4">
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Microsoft Excel</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Pivot Tables</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Slicers</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">KPI Reporting</span>
+          <p class="text-sm text-muted leading-relaxed flex-grow">Interactive Excel retail sales dashboard analysing
+            $12M+ in sales and 24.8M units across beverage brands, retailers, and regions for 2022–2023.</p>
+          <div class="flex flex-wrap gap-2 my-4"><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Excel</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">PivotTables</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Slicers</span>
           </div>
-          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge">
-            <a href="https://github.com/francisparwez/coca-cola-us-retailer-dashboard" target="_blank" rel="noopener noreferrer" class="text-indigo hover:text-ink transition-colors">View project ↗</a>
-          </div>
+          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge"><a
+              href="https://github.com/francisparwez/coca-cola-us-retailer-dashboard" target="_blank"
+              rel="noopener noreferrer" class="text-muted hover:text-ink transition-colors">Source ↗</a></div>
         </article>
 
-        <!-- Project 2: HR Analytics Dashboard -->
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2 h-2 rounded-full bg-indigo"></span>
+        <!-- Project 2: HR Analytics -->
+        <article
+          class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
+          <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-indigo"></span>
             <h3 class="font-mono font-semibold text-ink">hr-analytics.pbix</h3>
           </div>
-          <p class="text-sm text-muted leading-relaxed flex-grow">
-            An interactive Power BI dashboard built from cleaned and transformed HR data,
-            analysing employee attrition, demographics, salary, and tenure. The analysis
-            identified the 6–10 LPA salary band as contributing about <strong class="text-ink">32%</strong>
-            of total attrition (73 of 231).
-          </p>
-          <div class="flex flex-wrap gap-2 my-4">
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Power BI</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Power Query</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">DAX</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">ETL</span>
+          <p class="text-sm text-muted leading-relaxed flex-grow">Interactive Power BI dashboard analysing employee
+            attrition, demographics, salary, tenure, and workforce patterns using Power Query and DAX.</p>
+          <div class="flex flex-wrap gap-2 my-4"><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Power
+              BI</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Power
+              Query</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">DAX</span></div>
+          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge"><a
+              href="https://github.com/francisparwez/hr-analytics-dashboard-power-bi" target="_blank"
+              rel="noopener noreferrer" class="text-muted hover:text-ink transition-colors">Source ↗</a></div>
+        </article>
+
+        <!-- Project 3: Vehicle Service SQL Pipeline -->
+        <article
+          class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-amber/50 hover:shadow-xl hover:shadow-amber/10 transition-all duration-300">
+          <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-amber"></span>
+            <h3 class="font-mono font-semibold text-ink">vehicle-service-sql</h3>
           </div>
-          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge">
-            <a href="https://github.com/francisparwez/hr-analytics-dashboard-power-bi" target="_blank" rel="noopener noreferrer" class="text-indigo hover:text-ink transition-colors">View project ↗</a>
+          <p class="text-sm text-muted leading-relaxed flex-grow">End-to-end T-SQL data pipeline covering raw ingestion,
+            data profiling, cleaning, validation, staging, transformation, normalization, and exploratory analysis.</p>
+          <div class="flex flex-wrap gap-2 my-4"><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">SQL
+              Server</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">T-SQL</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">ETL</span></div>
+          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge"><a href="https://github.com/francisparwez"
+              target="_blank" rel="noopener noreferrer" class="text-muted hover:text-ink transition-colors">GitHub ↗</a>
           </div>
         </article>
 
-        <!-- Project 3: FPL Dream-Team Prediction -->
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-amber/50 hover:shadow-xl hover:shadow-amber/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2 h-2 rounded-full bg-amber"></span>
+        <!-- Project 4: Telco Churn -->
+        <article
+          class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-mint/50 hover:shadow-xl hover:shadow-mint/10 transition-all duration-300">
+          <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-mint"></span>
+            <h3 class="font-mono font-semibold text-ink">telco-churn.ipynb</h3>
+          </div>
+          <p class="text-sm text-muted leading-relaxed flex-grow">End-to-end customer churn analysis covering data
+            auditing, preprocessing, exploratory analysis, feature engineering, and analytical interpretation.</p>
+          <div class="flex flex-wrap gap-2 my-4"><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Python</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Pandas</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">EDA</span></div>
+          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge"><a href="https://github.com/francisparwez"
+              target="_blank" rel="noopener noreferrer" class="text-muted hover:text-ink transition-colors">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- Project 5: E-commerce Segmentation -->
+        <article
+          class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
+          <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-indigo"></span>
+            <h3 class="font-mono font-semibold text-ink">customer-segmentation.ipynb</h3>
+          </div>
+          <p class="text-sm text-muted leading-relaxed flex-grow">E-commerce customer segmentation using RFM analysis
+            and K-Means clustering to explore purchasing behaviour and identify customer groups.</p>
+          <div class="flex flex-wrap gap-2 my-4"><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">RFM</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">K-Means</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Python</span></div>
+          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge"><a href="https://github.com/francisparwez"
+              target="_blank" rel="noopener noreferrer" class="text-muted hover:text-ink transition-colors">GitHub ↗</a>
+          </div>
+        </article>
+
+        <!-- Project 6: Fantasy Football -->
+        <article
+          class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-amber/50 hover:shadow-xl hover:shadow-amber/10 transition-all duration-300">
+          <div class="flex items-center gap-2 mb-3"><span class="w-2 h-2 rounded-full bg-amber"></span>
             <h3 class="font-mono font-semibold text-ink">fpl-predictor.ipynb</h3>
           </div>
-          <p class="text-sm text-muted leading-relaxed flex-grow">
-            A predictive analytics project using <strong class="text-ink">10,000+</strong> player records.
-            Performed EDA, preprocessing, feature engineering, and model evaluation, then developed
-            a CatBoost/LightGBM pipeline achieving <strong class="text-ink">83% accuracy</strong> with
-            8-fold cross-validation.
-          </p>
-          <div class="flex flex-wrap gap-2 my-4">
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Python</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Pandas</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">LightGBM</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">CatBoost</span>
+          <p class="text-sm text-muted leading-relaxed flex-grow">MSc machine learning project using 10,000+ player
+            records, EDA, feature engineering, CatBoost and LightGBM, with an 8-fold cross-validation pipeline.</p>
+          <div class="flex flex-wrap gap-2 my-4"><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Python</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">CatBoost</span><span
+              class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">LightGBM</span>
           </div>
-          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge">
-            <a href="https://github.com/francisparwez/fantasy-premier-league-dream-team-predictor" target="_blank" rel="noopener noreferrer" class="text-indigo hover:text-ink transition-colors">View project ↗</a>
-          </div>
-        </article>
-
-         <!-- Project 4: BCG X Data Science Job Simulation -->
-        <!-- <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2 h-2 rounded-full bg-indigo"></span>
-            <h3 class="font-mono font-semibold text-ink">bcg-x-data-science-simulation</h3>
-          </div>
-          <p class="text-sm text-muted leading-relaxed flex-grow">
-            Practical data science simulation covering business problem framing, EDA, data cleaning,
-            feature engineering, model evaluation, and business recommendations. Built and evaluated
-            a Random Forest churn classification model and translated findings into stakeholder-ready insights.
-          </p>
-          <div class="flex flex-wrap gap-2 my-4">
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Python</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">EDA</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Random Forest</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Business Insights</span>
-          </div>
-          <div class="pt-3 border-t border-edge font-mono text-xs text-muted">Forage · Aug 2026</div>
-        </article> -->
-
-        <!-- Project 5: Daily Tips to Bartenders -->
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-mint/50 hover:shadow-xl hover:shadow-mint/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2 h-2 rounded-full bg-mint"></span>
-            <h3 class="font-mono font-semibold text-ink">daily-tips-to-bartenders</h3>
-          </div>
-          <p class="text-sm text-muted leading-relaxed flex-grow">
-            A practical web project providing daily tips and useful guidance for bartenders.
-            Built as a focused, accessible resource that combines a real-world hospitality
-            use case with web development and content presentation.
-          </p>
-          <div class="flex flex-wrap gap-2 my-4">
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Python</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Pandas</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Scikit-learn</span>
-          </div>
-          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge">
-            <a href="https://github.com/francisparwez/daily-tips-to-bartenders" target="_blank" rel="noopener noreferrer" class="text-indigo hover:text-ink transition-colors">View project ↗</a>
-          </div>
-        </article>
-
-        <!-- Project 6: Flight Status Dashboard -->
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-amber/50 hover:shadow-xl hover:shadow-amber/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-3">
-            <span class="w-2 h-2 rounded-full bg-amber"></span>
-            <h3 class="font-mono font-semibold text-ink">flight-status-dashboard</h3>
-          </div>
-          <p class="text-sm text-muted leading-relaxed flex-grow">
-            An interactive flight status dashboard designed to present flight information
-            in a clear and user-friendly interface. The project demonstrates dashboard
-            development, data presentation, and interactive web application skills.
-          </p>
-          <div class="flex flex-wrap gap-2 my-4">
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Dashboard</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">Web Development</span>
-            <span class="font-mono text-xs px-2 py-1 rounded-full bg-void border border-edge text-muted">GitHub</span>
-          </div>
-          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge">
-            <a href="https://github.com/francisparwez/flight-status-dashboard" target="_blank" rel="noopener noreferrer" class="text-indigo hover:text-ink transition-colors">View project ↗</a>
-          </div>
-        </article>  
-
-      </div>
-    </section>
-
-
-
-    <!-- =========================================================
-         CERTIFICATES & TRAINING
-    ========================================================== -->
-    <section id="certificates" class="max-w-7xl mx-auto px-6 md:px-12 py-24" data-reveal>
-      <p class="font-mono text-xs text-muted tracking-widest">// certificates/</p>
-      <h2 class="font-mono text-3xl md:text-4xl font-bold text-ink mt-3 mb-2">Certificates &amp; Training</h2>
-      <p class="text-muted mb-12 max-w-2xl">
-        Selected training and practical simulations demonstrating continued development
-        across SQL, Power BI, data analytics, and data science.
-      </p>
-
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-indigo"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Introduction to SQL</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Foundational SQL querying, filtering, aggregation, and relational data analysis.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/1edad281ceeff0ed6fa39b90159e503c4f81918f?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-indigo"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Intermediate SQL</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Intermediate SQL analysis including joins, subqueries, and advanced querying techniques.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/24a83b21e6c185da3e2bbebd9ee4b8e3a570a2b3?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-mint/50 hover:shadow-xl hover:shadow-mint/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-mint"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Introduction to Power BI</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Power BI fundamentals covering report building, visuals, data modelling, and interactive analysis.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/2a44e8c61cc8a59ba7ea8e0639ab18fc8204bfac?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-mint/50 hover:shadow-xl hover:shadow-mint/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-mint"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Introduction to DAX in Power BI</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">DAX fundamentals for measures, calculated columns, and analytical calculations.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/1e5a1d4e7f7cfe20d9a591f90a509e49bb59597e7?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-indigo"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Data Visualization in Power BI</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Built visual reports and dashboards to communicate analytical findings in Power BI.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/52c4bafc93a2f685d14c59bef854468a25d77f8c?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-amber/50 hover:shadow-xl hover:shadow-amber/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-amber"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Case Study: Analyzing Customer Churn in Power BI</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Practical Power BI case study analysing customer churn and communicating business insights.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/e68e59594198821aa4073cafe19a83811bead176?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-mint/50 hover:shadow-xl hover:shadow-mint/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-mint"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Data Preparation in Power BI</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Data preparation workflows for cleaning, shaping, and preparing datasets for analysis.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/f00dc636ca6ea3d8db4f1e0c3c11fee49e14d6a7?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-indigo/50 hover:shadow-xl hover:shadow-indigo/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-indigo"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">DataCamp</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Data Transformation in Power BI</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Power Query transformation techniques for shaping and transforming data before analysis.</p>
-          <a href="https://www.datacamp.com/statement-of-accomplishment/course/a80a8347320e8ea048f768681f041270ef33bcbc?raw=1" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
-        </article>
-
-        <article class="group flex flex-col rounded-xl border border-edge bg-panel p-6 hover:-translate-y-1.5 hover:border-amber/50 hover:shadow-xl hover:shadow-amber/10 transition-all duration-300">
-          <div class="flex items-center gap-2 mb-4"><span class="w-2 h-2 rounded-full bg-amber"></span><span class="font-mono text-xs text-muted uppercase tracking-widest">Forage · BCG X</span></div>
-          <h3 class="font-mono font-semibold text-ink leading-relaxed">Data Science Job Simulation</h3>
-          <p class="text-sm text-muted mt-3 flex-grow">Practical simulation covering business framing, EDA, feature engineering, modelling, evaluation, and recommendations.</p>
-          <a href="https://www.theforage.com/completion-certificates/SKZxezskWgmFjRvj9/Tcz8gTtprzAS4xSoK_SKZxezskWgmFjRvj9_6a7c1a2702d0aa3aba7cc01f_1787120067963_completion_certificate.pdf" target="_blank" rel="noopener noreferrer" class="mt-5 pt-4 border-t border-edge font-mono text-sm text-indigo hover:text-ink transition-colors">View certificate ↗</a>
+          <div class="flex gap-5 font-mono text-sm pt-3 border-t border-edge"><a
+              href="https://github.com/francisparwez/fantasy-premier-league-dream-team-predictor" target="_blank"
+              rel="noopener noreferrer" class="text-muted hover:text-ink transition-colors">Source ↗</a></div>
         </article>
 
       </div>
     </section>
 
     <!-- =========================================================
-         ANALYST STRENGTHS
+         EXPERIENCE
     ========================================================== -->
-    <section id="strengths" class="max-w-7xl mx-auto px-6 md:px-12 py-20" data-reveal>
-      <p class="font-mono text-xs text-muted tracking-widest">// analyst-profile.json</p>
-      <h2 class="font-mono text-3xl md:text-4xl font-bold text-ink mt-3 mb-10">What I Bring to a Data Team</h2>
+    <section id="experience" class="max-w-7xl mx-auto px-6 md:px-12 py-24" data-reveal>
+      <p class="font-mono text-xs text-muted tracking-widest">// experience.log</p>
+      <h2 class="font-mono text-3xl md:text-4xl font-bold text-ink mt-3 mb-12">Experience</h2>
+      <div class="space-y-6">
+        <article class="rounded-xl border border-edge bg-panel p-6 md:p-8">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+            <div>
+              <h3 class="font-mono text-lg font-semibold text-ink">Data Science &amp; Analytics Intern</h3>
+              <p class="text-indigo mt-1">BeeNeural Private Limited · Remote</p>
+            </div>
+            <span class="font-mono text-xs text-muted">Aug 2026 – Present</span>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-muted leading-relaxed list-disc pl-5">
+            <li>Performed end-to-end EDA using Python, Pandas, NumPy, Matplotlib, and Seaborn.</li>
+            <li>Cleaned and validated structured datasets by handling missing values, duplicates, inconsistencies, and
+              IQR-based outlier analysis.</li>
+            <li>Engineered analytical features and created documented visualizations, group-by analysis, and correlation
+              analysis.</li>
+            <li>Maintained reproducible project work with Git/GitHub, incremental branches, commits, cleaned datasets,
+              summaries, and READMEs.</li>
+          </ul>
+        </article>
+        <article class="rounded-xl border border-edge bg-panel p-6 md:p-8">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-3">
+            <div>
+              <h3 class="font-mono text-lg font-semibold text-ink">MERN Stack Developer</h3>
+              <p class="text-indigo mt-1">Divine Virtuality · Karachi, Pakistan</p>
+            </div>
+            <span class="font-mono text-xs text-muted">Oct 2020 – Nov 2021</span>
+          </div>
+          <ul class="mt-5 space-y-2 text-sm text-muted leading-relaxed list-disc pl-5">
+            <li>Developed and deployed 5+ responsive web applications using React and Node.js.</li>
+            <li>Designed and integrated 20+ RESTful APIs with Express.js and MongoDB.</li>
+            <li>Collaborated with international clients across the US, India, and Lebanon to deliver features on
+              schedule.</li>
+            <li>Applied Git-based workflows, reusable components, debugging, performance optimization, and maintainable
+              application design.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-xl border border-edge bg-panel p-6">
-          <p class="font-mono text-indigo text-sm mb-3">01 · DATA QUALITY</p>
-          <h3 class="font-mono font-semibold text-ink mb-2">Clean, validate, structure</h3>
-          <p class="text-sm text-muted leading-relaxed">ETL, data cleaning, preprocessing, validation, dataset preparation, and quality checks before analysis.</p>
-        </div>
-        <div class="rounded-xl border border-edge bg-panel p-6">
-          <p class="font-mono text-amber text-sm mb-3">02 · ANALYSIS</p>
-          <h3 class="font-mono font-semibold text-ink mb-2">Turn data into answers</h3>
-          <p class="text-sm text-muted leading-relaxed">SQL analysis, KPI reporting, exploratory analysis, Excel modelling, and Power BI dashboards focused on business questions.</p>
-        </div>
-        <div class="rounded-xl border border-edge bg-panel p-6">
-          <p class="font-mono text-mint text-sm mb-3">03 · COMMUNICATION</p>
-          <h3 class="font-mono font-semibold text-ink mb-2">Explain the result</h3>
-          <p class="text-sm text-muted leading-relaxed">Translate technical findings into clear recommendations and stakeholder-ready reporting.</p>
-        </div>
+    <!-- =========================================================
+         CERTIFICATIONS
+    ========================================================== -->
+    <section id="certifications" class="max-w-7xl mx-auto px-6 md:px-12 py-24" data-reveal>
+      <p class="font-mono text-xs text-muted tracking-widest">// certifications.md</p>
+      <h2 class="font-mono text-3xl md:text-4xl font-bold text-ink mt-3 mb-12">Certifications &amp; Learning</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <article class="rounded-xl border border-edge bg-panel p-6">
+          <p class="font-mono text-xs text-amber uppercase tracking-widest">Aug 2026</p>
+          <h3 class="font-mono font-semibold text-ink mt-2">BCG X — Data Science Job Simulation</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Practical data science simulation covering business problem
+            framing, EDA, data cleaning, feature engineering, Random Forest classification, model evaluation, and
+            business recommendations.</p>
+        </article>
+        <article class="rounded-xl border border-edge bg-panel p-6">
+          <p class="font-mono text-xs text-indigo uppercase tracking-widest">Continuous Learning</p>
+          <h3 class="font-mono font-semibold text-ink mt-2">Data Analytics &amp; Data Science Development</h3>
+          <p class="text-sm text-muted mt-3 leading-relaxed">Ongoing development across statistics, SQL, Power BI,
+            Python, data engineering concepts, machine learning, and analytical project documentation.</p>
+        </article>
       </div>
     </section>
 
@@ -567,64 +574,155 @@
       <!-- Data Analytics -->
       <h3 class="font-mono text-sm text-muted tracking-widest uppercase mb-4">Data Analytics</h3>
       <div class="flex flex-wrap gap-3 mb-10">
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Power BI</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Dashboard Design</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Data Visualisation</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Exploratory Data Analysis</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> KPI Reporting</span>
-<span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> ETL &amp; Data Cleaning</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Predictive Modelling</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> MS Excel</span>
-<span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Advanced Pivot Tables</span>
-<span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> VLOOKUPs &amp; Charts</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Power BI</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Power Query</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> DAX</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> ETL / ELT</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Dashboard Design</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Data Visualisation</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Exploratory Data Analysis</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Feature Engineering</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Predictive Modelling</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Data Quality</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> KPI Reporting</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> MS Excel</span>
       </div>
 
       <!-- SQL & Databases -->
       <h3 class="font-mono text-sm text-muted tracking-widest uppercase mb-4">SQL &amp; Databases</h3>
       <div class="flex flex-wrap gap-3 mb-10">
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> SQL</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> Joins &amp; Subqueries</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> Window Functions</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> CTEs</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> SQL Server</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> MySQL</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> PostgreSQL</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-amber"></span> MongoDB</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> SQL</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> Joins &amp; Subqueries</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> Window Functions</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> CTEs</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> SQL Server</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> MySQL</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> PostgreSQL</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-amber/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-amber"></span> MongoDB</span>
       </div>
 
       <!-- Python -->
       <h3 class="font-mono text-sm text-muted tracking-widest uppercase mb-4">Python</h3>
       <div class="flex flex-wrap gap-3 mb-10">
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-mint"></span> NumPy</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-mint"></span> Pandas</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-mint"></span> Scikit-learn</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-mint"></span> Keras</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-mint"></span> Matplotlib</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-mint"></span> Seaborn</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> NumPy</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> Pandas</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> Scikit-learn</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> Keras</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> Matplotlib</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> Seaborn</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> LightGBM</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> CatBoost</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> Feature Engineering</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-mint/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-mint"></span> Model Evaluation</span>
       </div>
 
       <!-- Software Development -->
       <h3 class="font-mono text-sm text-muted tracking-widest uppercase mb-4">Software Development</h3>
       <div class="flex flex-wrap gap-3 mb-10">
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> React / React Native</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Node.js / Express.js</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> JavaScript</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> HTML5 / CSS3</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Tailwind / Bootstrap</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Redux Toolkit</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> GraphQL</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Firebase / Django</span>
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span class="w-2 h-2 rounded-full bg-indigo"></span> Git / GitHub</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> React / React Native</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Node.js / Express.js</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> JavaScript</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> HTML5 / CSS3</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Tailwind / Bootstrap</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Redux Toolkit</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> GraphQL</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Firebase / Django</span>
+        <span
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm hover:border-indigo/60 hover:-translate-y-0.5 transition-all"><span
+            class="w-2 h-2 rounded-full bg-indigo"></span> Git / GitHub</span>
       </div>
 
       <!-- Soft skills -->
       <h3 class="font-mono text-sm text-muted tracking-widest uppercase mb-4">Soft Skills</h3>
       <div class="flex flex-wrap gap-3">
-        <span class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Problem solving</span>
-        <span class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Documentation</span>
-        <span class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Time management</span>
-        <span class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Teamwork</span>
-        <span class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Adaptability</span>
+        <span
+          class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Problem
+          solving</span>
+        <span
+          class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Documentation</span>
+        <span
+          class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Time
+          management</span>
+        <span
+          class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Teamwork</span>
+        <span
+          class="px-4 py-2 rounded-lg bg-panel border border-edge font-mono text-sm text-muted hover:text-ink hover:border-indigo/60 hover:-translate-y-0.5 transition-all">Adaptability</span>
       </div>
     </section>
 
@@ -634,34 +732,31 @@
     <section id="contact" class="max-w-7xl mx-auto px-6 md:px-12 py-24" data-reveal>
       <p class="font-mono text-xs text-muted tracking-widest">// contact.sh</p>
       <h2 class="font-mono text-3xl md:text-4xl font-bold text-ink mt-3 mb-2">Let's Build Something Together</h2>
-      <p class="text-muted mb-12 max-w-xl">Looking for a Data Analyst who can work across SQL, Excel, Power BI, and Python? Let’s talk.</p>
+      <p class="text-muted mb-12 max-w-xl">Have a project in mind, or just want to say hi? My inbox is always open.</p>
 
       <div class="grid md:grid-cols-2 gap-12">
 
         <!-- Contact form -->
-        <form
-          id="contact-form"
-          action="https://formspree.io/f/xdenprgj"
-          method="POST"
-          class="space-y-5">
+        <form id="contact-form" action="https://formspree.io/f/xdenprgj" method="POST" class="space-y-5">
           <div>
             <label for="name" class="block font-mono text-xs text-muted uppercase tracking-widest mb-2">Name</label>
             <input id="name" name="name" type="text" required placeholder="Your Name"
-                   class="w-full bg-panel border border-edge rounded-lg px-4 py-3 text-ink placeholder-muted/40 focus:ring-2 focus:ring-indigo/60 focus:border-indigo outline-none transition-all" />
+              class="w-full bg-panel border border-edge rounded-lg px-4 py-3 text-ink placeholder-muted/40 focus:ring-2 focus:ring-indigo/60 focus:border-indigo outline-none transition-all" />
           </div>
           <div>
             <label for="email" class="block font-mono text-xs text-muted uppercase tracking-widest mb-2">Email</label>
             <input id="email" name="email" type="email" required placeholder="abc@mail.com"
-                   class="w-full bg-panel border border-edge rounded-lg px-4 py-3 text-ink placeholder-muted/40 focus:ring-2 focus:ring-indigo/60 focus:border-indigo outline-none transition-all" />
+              class="w-full bg-panel border border-edge rounded-lg px-4 py-3 text-ink placeholder-muted/40 focus:ring-2 focus:ring-indigo/60 focus:border-indigo outline-none transition-all" />
           </div>
           <div>
-            <label for="message" class="block font-mono text-xs text-muted uppercase tracking-widest mb-2">Message</label>
+            <label for="message"
+              class="block font-mono text-xs text-muted uppercase tracking-widest mb-2">Message</label>
             <textarea id="message" name="message" rows="5" required placeholder="Enter Your Message"
-                      class="w-full bg-panel border border-edge rounded-lg px-4 py-3 text-ink placeholder-muted/40 focus:ring-2 focus:ring-indigo/60 focus:border-indigo outline-none transition-all resize-none"></textarea>
+              class="w-full bg-panel border border-edge rounded-lg px-4 py-3 text-ink placeholder-muted/40 focus:ring-2 focus:ring-indigo/60 focus:border-indigo outline-none transition-all resize-none"></textarea>
           </div>
 
           <button type="submit"
-                  class="inline-flex items-center gap-2 font-mono text-sm font-semibold bg-indigo text-void px-6 py-3 rounded-lg hover:bg-indigo/85 hover:-translate-y-0.5 transition-all shadow-lg shadow-indigo/20">
+            class="inline-flex items-center gap-2 font-mono text-sm font-semibold bg-indigo text-void px-6 py-3 rounded-lg hover:bg-indigo/85 hover:-translate-y-0.5 transition-all shadow-lg shadow-indigo/20">
             Send message →
           </button>
 
@@ -680,11 +775,13 @@
           <div class="space-y-6 font-mono text-sm">
             <div>
               <p class="text-muted uppercase tracking-widest text-xs mb-1">Email</p>
-              <a href="mailto:francisparwez@gmail.com" class="text-ink hover:text-indigo transition-colors text-lg break-all">francisparwez@gmail.com</a>
+              <a href="mailto:francisparwez@gmail.com"
+                class="text-ink hover:text-indigo transition-colors text-lg break-all">francisparwez@gmail.com</a>
             </div>
             <div>
               <p class="text-muted uppercase tracking-widest text-xs mb-1">Phone</p>
-              <a href="tel:+923243237197" class="text-ink hover:text-indigo transition-colors text-lg">+92 324 3237197</a>
+              <a href="tel:+923243237197" class="text-ink hover:text-indigo transition-colors text-lg">+92 324
+                3237197</a>
             </div>
             <div>
               <p class="text-muted uppercase tracking-widest text-xs mb-1">Based in</p>
@@ -693,20 +790,38 @@
           </div>
 
           <div class="mt-10 grid grid-cols-2 gap-3">
-            <a href="https://github.com/francisparwez" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="text-muted"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.24 9.24 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            <a href="https://github.com/francisparwez" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="text-muted">
+                <path
+                  d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-1.04-.01-1.88-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.51-1.11-1.51-.91-.64.07-.63.07-.63 1 .07 1.53 1.05 1.53 1.05.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.05a9.24 9.24 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.42.2 2.47.1 2.73.64.72 1.03 1.63 1.03 2.75 0 3.93-2.34 4.79-4.57 5.05.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z" />
+              </svg>
               GitHub
             </a>
-            <a href="https://www.linkedin.com/in/francisparwez/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="text-muted"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.83v2.05h.05c.53-1 1.85-2.05 3.8-2.05 4.07 0 4.82 2.68 4.82 6.16V23h-4v-6.9c0-1.64-.03-3.76-2.29-3.76-2.29 0-2.64 1.79-2.64 3.64V23h-4V8z"/></svg>
+            <a href="https://www.linkedin.com/in/francisparwez/" target="_blank" rel="noopener noreferrer"
+              class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" class="text-muted">
+                <path
+                  d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.5 8h4V23h-4V8zm7.5 0h3.83v2.05h.05c.53-1 1.85-2.05 3.8-2.05 4.07 0 4.82 2.68 4.82 6.16V23h-4v-6.9c0-1.64-.03-3.76-2.29-3.76-2.29 0-2.64 1.79-2.64 3.64V23h-4V8z" />
+              </svg>
               LinkedIn
             </a>
-            <a href="mailto:francisparwez@gmail.com" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-muted"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 6l10 7 10-7"/></svg>
+            <a href="mailto:francisparwez@gmail.com"
+              class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="text-muted">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <path d="M2 6l10 7 10-7" />
+              </svg>
               Email
             </a>
-            <a href="tel:+923243237197" class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-muted"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <a href="tel:+923243237197"
+              class="flex items-center gap-3 px-4 py-3 rounded-lg bg-panel border border-edge hover:border-indigo/60 hover:-translate-y-0.5 transition-all font-mono text-sm">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                class="text-muted">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
               Call
             </a>
           </div>
@@ -720,7 +835,8 @@
        FOOTER
   ========================================================== -->
   <footer class="border-t border-edge">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-muted">
+    <div
+      class="max-w-7xl mx-auto px-6 md:px-12 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-muted">
       <p>© <span id="year"></span> Francis Parwez. All rights reserved.</p>
       <a href="#home" class="hover:text-indigo transition-colors">Back to top ↑</a>
     </div>
@@ -747,7 +863,7 @@
     // has requested reduced motion)
     // ---------------------------------------------------------------
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const roles = ['Data Analyst', 'Data Scientist', 'BI Developer'];
+    const roles = ['Data Analyst', 'Data Scientist', 'BI Developer', 'SQL / ETL Analyst'];
     const roleEl = document.getElementById('role-text');
     let roleIndex = 0;
     if (!prefersReducedMotion && roleEl) {
@@ -829,105 +945,10 @@
       }
     });
 
-
-    // ---------------------------------------------------------------
-    // Portfolio visitor analytics
-    // Sends one visit per browser session to Google Sheets.
-    // The Google Apps Script URL is intentionally a placeholder until
-    // you deploy the companion Code.gs file.
-    // ---------------------------------------------------------------
-    
-    // ---------------------------------------------------------------
-    // Portfolio Visitor Analytics
-    // ---------------------------------------------------------------
-    
-    const VISITOR_TRACKING_URL = 'https://script.google.com/macros/s/AKfycbzyURR91jK1I9ZLD_Thmb1eChpqPe6YVAiJtuzGpfKkJ-kxC19s7cqfiK3754sxJdW2bg/exec';
-
-    async function trackPortfolioVisit() {
-
-        // Only record one visit per browser session
-        const trackingKey = 'francis_portfolio_visit_tracked';
-
-        if (sessionStorage.getItem(trackingKey)) {
-            return;
-        }
-
-        const payload = {
-            timestamp: new Date().toISOString(),
-
-            page: window.location.href,
-
-            referrer: document.referrer || 'Direct',
-
-            timezone:
-                Intl.DateTimeFormat().resolvedOptions().timeZone || 'Unknown',
-
-            device:
-                /Mobi|Android/i.test(navigator.userAgent)
-                    ? 'Mobile'
-                    : /Tablet|iPad/i.test(navigator.userAgent)
-                        ? 'Tablet'
-                        : 'Desktop',
-
-            browser: (() => {
-                const ua = navigator.userAgent;
-
-                if (ua.includes('Edg/')) return 'Edge';
-                if (ua.includes('Chrome/')) return 'Chrome';
-                if (ua.includes('Firefox/')) return 'Firefox';
-                if (ua.includes('Safari/')) return 'Safari';
-
-                return 'Other';
-            })(),
-
-            operating_system: (() => {
-                const ua = navigator.userAgent;
-
-                if (/Windows/i.test(ua)) return 'Windows';
-                if (/Mac OS X/i.test(ua)) return 'macOS';
-                if (/Android/i.test(ua)) return 'Android';
-                if (/iPhone|iPad|iPod/i.test(ua)) return 'iOS';
-                if (/Linux/i.test(ua)) return 'Linux';
-
-                return 'Other';
-            })(),
-
-            screen:
-                `${window.screen.width}x${window.screen.height}`
-        };
-
-        try {
-
-            await fetch(VISITOR_TRACKING_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-
-                headers: {
-                    'Content-Type': 'text/plain;charset=utf-8'
-                },
-
-                body: JSON.stringify(payload)
-            });
-
-            // Mark this browser session as tracked
-            sessionStorage.setItem(trackingKey, '1');
-
-            console.log('Portfolio visit recorded.');
-
-        } catch (error) {
-
-            console.error(
-                'Visitor tracking failed:',
-                error
-            );
-        }
-    }
-
-    trackPortfolioVisit();
-
     // Footer year
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
+
 </html>
